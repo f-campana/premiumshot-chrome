@@ -21,7 +21,7 @@ jobs:
           ref: e32806f31a1ecc5c862f70cf3a6921742f8d976b
           path: .references/premiumshot-mac
           persist-credentials: false
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: '24'
           cache: npm
