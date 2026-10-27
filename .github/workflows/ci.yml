@@ -14,7 +14,7 @@ jobs:
     name: Unit tests and candidate package
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
         with:
           persist-credentials: false
       - uses: actions/setup-node@v4
@@ -39,10 +39,10 @@ jobs:
     name: Pinned Mac layout parity
     runs-on: macos-26
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
         with:
           persist-credentials: false
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
         with:
           repository: f-campana/premiumshot-mac
           ref: e32806f31a1ecc5c862f70cf3a6921742f8d976b
