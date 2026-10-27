@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>PremiumShot · Native capture handoff checks</title>
+<style>body{font:16px/1.5 system-ui;background:#f7f6f3;color:#282b25;max-width:900px;margin:48px auto;padding:0 24px}button{font:inherit;padding:10px 16px;margin-right:12px}pre{white-space:pre-wrap;font-size:13px;padding:24px;background:white;border:1px solid #ddd;border-radius:12px}.fail{color:#a12727}</style>
+</head><body><h1>Native Chrome capture handoff checks</h1>
+<p>Component checks using the production storage module and renderer. This page does not load the extension or exercise Chrome’s capture permission.</p>
+<button id="run">Run native storage checks</button><button id="large">Run 5K at 2× image pipeline</button>
+<p id="status" role="status">Ready.</p><ol id="checks"></ol><pre id="results"></pre>
+<script type="module" src="capture-store-browser.js"></script></body></html>

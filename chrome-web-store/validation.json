@@ -1,0 +1,254 @@
+{
+  "candidate": "0.2.0",
+  "started_on": "2026-10-10",
+  "completed_on": "2026-10-11",
+  "timezone": "Europe/Paris",
+  "unit_tests": {
+    "passed": 29,
+    "failed": 0,
+    "log": "reports/chrome-beta-0.2.0/node-tests.txt",
+    "sha256": "e9b55d58ae5d909df663def3ac8e523d4762359089c5841b27c9e77f6d217d6c",
+    "indexeddb_provider": "fake-indexeddb 6.2.5; development only"
+  },
+  "native_geometry": {
+    "passed": 60,
+    "log": "reports/chrome-beta-0.2.0/core-parity.txt",
+    "cli_sha256": "e3e5a7ac61b2637c0c36bdfad7c5490398e5fcb9dec1489cc0fdfc84d7fa27cd",
+    "cli_scope": "Existing development CLI, not shipped; repository extraction and a pinned core revision remain a later release concern."
+  },
+  "syntax": {
+    "passed": 20,
+    "files": [
+      "chrome-extension/popup.js",
+      "chrome-extension/background.js",
+      "chrome-extension/picker.js",
+      "chrome-extension/render-worker.js",
+      "chrome-extension/editor.js",
+      "chrome-extension/lib/renderer.js",
+      "chrome-extension/lib/capture-store.js",
+      "chrome-extension/lib/zoom.js",
+      "chrome-extension/lib/appearance.js",
+      "chrome-extension/lib/capture.js",
+      "chrome-extension/lib/inspect.js",
+      "chrome-extension/tests/capture-store-browser.js",
+      "chrome-extension/tests/layout.test.js",
+      "chrome-extension/tests/appearance.test.js",
+      "chrome-extension/tests/zoom.test.js",
+      "chrome-extension/tests/capture-store.test.js",
+      "chrome-extension/tests/background.test.js",
+      "chrome-extension/tests/browser.mjs",
+      "chrome-extension/tests/compare-core.mjs",
+      "chrome-web-store/source/capture-picker.js"
+    ]
+  },
+  "native_storage": {
+    "environment": "Native Chrome IndexedDB over HTTP; no MV3 integration",
+    "checks": [
+      {
+        "name": "Atomic read-and-delete with two connections"
+      },
+      {
+        "name": "Expiry rejects and deletes the record"
+      },
+      {
+        "name": "Browser-session change rejects and deletes the record"
+      },
+      {
+        "name": "Cleanup preserves only fresh records in this session"
+      },
+      {
+        "name": "Source-tab cleanup and explicit cancellation leave no record"
+      },
+      {
+        "name": "Aborted write leaves no record"
+      }
+    ],
+    "pendingRecords": 0,
+    "testDatabaseDeleted": true
+  },
+  "large_image": {
+    "environment": "Native Chrome component pipeline; synthetic image, no captureVisibleTab call",
+    "cssViewport": {
+      "width": 5120,
+      "height": 2880
+    },
+    "bitmap": {
+      "width": 10240,
+      "height": 5760,
+      "megapixels": 58.9824
+    },
+    "pngBytes": 12053779,
+    "base64Characters": 16071730,
+    "sha256": "d59e97ecb7da508fa51434c44fd3822f45971101e803fc109c5f0e0151347e76",
+    "selectionCrop": {
+      "x": 200,
+      "y": 200,
+      "width": 1600,
+      "height": 1000
+    },
+    "export": {
+      "width": 4096,
+      "height": 2501,
+      "capped": true,
+      "bytes": 6238743
+    },
+    "pendingRecords": 0,
+    "testDatabaseDeleted": true
+  },
+  "exports": [
+    {
+      "look": "dawn",
+      "size": [
+        2789,
+        1269
+      ],
+      "changed_channels": 0,
+      "byte_identical": true,
+      "sha256": "51724975082cf4add6cbf46d5b5599714d20e7c9469119130e3586d172582b27",
+      "download": "PremiumShot-dawn-2789x1269 (1).png",
+      "download_modified_at": 1791669149.9728522,
+      "clear_corner_alpha": null
+    },
+    {
+      "look": "tide",
+      "size": [
+        2789,
+        1269
+      ],
+      "changed_channels": 0,
+      "byte_identical": true,
+      "sha256": "769634d6ccd41661acb00f9a10216339b3054d29e8a9ce28693d48a00756480d",
+      "download": "PremiumShot-tide-2789x1269 (1).png",
+      "download_modified_at": 1791669214.3029723,
+      "clear_corner_alpha": null
+    },
+    {
+      "look": "paper",
+      "size": [
+        2789,
+        1269
+      ],
+      "changed_channels": 0,
+      "byte_identical": true,
+      "sha256": "b160396e8f461f759685aeed43586001a4313c4ecbe8975ad4ad31b08f4d4822",
+      "download": "PremiumShot-paper-2789x1269 (1).png",
+      "download_modified_at": 1791669221.1802564,
+      "clear_corner_alpha": null
+    },
+    {
+      "look": "graphite",
+      "size": [
+        2789,
+        1269
+      ],
+      "changed_channels": 0,
+      "byte_identical": true,
+      "sha256": "25d79776c2b0fb17bb5c826c974a4ea7e225ec75ce84834f977e6a631135cb18",
+      "download": "PremiumShot-graphite-2789x1269 (1).png",
+      "download_modified_at": 1791669221.9141986,
+      "clear_corner_alpha": null
+    },
+    {
+      "look": "clear",
+      "size": [
+        2789,
+        1269
+      ],
+      "changed_channels": 0,
+      "byte_identical": true,
+      "sha256": "50143cd67e5e286bd323ee9368401490f18254244110525183eaa5b6547222cd",
+      "download": "PremiumShot-clear-2789x1269 (1).png",
+      "download_modified_at": 1791669222.6394432,
+      "clear_corner_alpha": 0
+    }
+  ],
+  "picker_component": {
+    "request": "selection-complete",
+    "selection": {
+      "rect": {
+        "height": 33.5,
+        "width": 95.1796875,
+        "x": 77,
+        "y": 383
+      },
+      "viewport": {
+        "height": 800,
+        "offsetX": 0,
+        "offsetY": 0,
+        "scale": 1,
+        "scrollX": 0,
+        "scrollY": 78,
+        "width": 1280
+      }
+    },
+    "overlayRemoved": true
+  },
+  "artwork": [
+    {
+      "file": "assets/01-capture-popup.jpg",
+      "source": "Current packaged popup HTML at true 350 x 452 CSS pixels in source/capture-popup.html; local HTTP, not loaded MV3."
+    },
+    {
+      "file": "assets/02-element-picker.jpg",
+      "source": "Current unchanged picker.js over actual DOM of source/fixture.html; artwork-only messaging adapter and scripted hover, no captureVisibleTab."
+    },
+    {
+      "file": "assets/03-editor-dawn.jpg",
+      "source": "Retained clean 0.1.4 asset (assets/01-editor-dawn.jpg in the prior kit); current editor markup, styles, rendering and fixture unchanged. Fresh 0.2.0 frontend/export checks recorded separately."
+    },
+    {
+      "file": "assets/04-editor-tide-dark.jpg",
+      "source": "Retained clean 0.1.4 asset (assets/02-editor-tide-dark.jpg in the prior kit); same UI invariants as Dawn."
+    },
+    {
+      "file": "assets/05-inspect.jpg",
+      "source": "Current packaged editor frontend, Tide 16:9, Actual size at 100%, local HTTP."
+    }
+  ],
+  "browser_console": {
+    "storage": "No warnings/errors",
+    "popup": "No warnings/errors",
+    "picker_preview": "No warnings/errors",
+    "editor": "No warnings/errors"
+  },
+  "source_sha256": {
+    "manifest.json": "c7d08b71d0a1bd3771f04c47baa8f9816e62d5155ad8485f4da930d3e5f92e9f",
+    "background.js": "4e42b20f50ce514b0372ba0d5eecd18a73015c729beb74cdb108fa096fd3ec3d",
+    "picker.js": "a7210879a10791ce79330b194911353b9fb5a5143823b5debfd71df146002653",
+    "popup.html": "c77daa2d19936befb025c37cae814e0c089da46f096b636183c953d0d94fe6dd",
+    "popup.js": "01ddff7456e598e8e6c799f5b0be2e9c225a4101b1bed8d9918e29a052c138a2",
+    "editor.html": "12618fa04247126db558458e70490d004b1547b7b5f4429dd4d090b6a935e0b9",
+    "editor.js": "ae0b76a63dde89646236f60d83d3080df1c70a45dbc16732cabf8b734d730c1d",
+    "render-worker.js": "1e104de77becc257b7893ee4e7e20dda0c50eeac502742dc75a04e5ed18fcf0d",
+    "styles.css": "9ab4fdafc6869e6403947e4b7688118813298c9f9adbca19fb4e86fba23065a8",
+    "README.md": "aa6760be0b420dca7898eb3ff9ec8a78c54a614b9d7cdae4aa1d1216dc3c15a7",
+    "lib/appearance.js": "1540b08f39bdb48556e8b60bcdf85314154fe1c84004a98bd6e15bfc8ec407f1",
+    "lib/capture.js": "fc363a49ab4df05df76cd4531465208645289ff362f0723beb2d56e15904b15d",
+    "lib/capture-store.js": "9f3bf4d0cd0fe2129c3881ed961562dd8cb8a34e599b0b350a9b3554fe4c2ba7",
+    "lib/inspect.js": "05302706f512adcdaf8bfcc1f56b86910a0e4dfc2727caa4341ab4967b6fdfe3",
+    "lib/renderer.js": "c55b67f9a7aad7d8a2b08ff1438fdb70153d750a32e547d6fb6d1b992ccf55f9",
+    "lib/zoom.js": "57dd6e8b3923ffdee0ede8e706bcdf9eb35cb4c561cee93e8508ee56eb369a64",
+    "assets/example.png": "1cd893c82e53c247d2e29dd0d2943ff6beaba98b11f844f157c799c4fb550ec5",
+    "assets/icon-16.png": "4a4df9bceb06fe89c3941010ce39b642e7b4342f5625fe9c80fa156c0a88e34b",
+    "assets/icon-48.png": "3b1321cf6ed40fc807812a82adfa4afcf848a22e46334cee25ba2ee906d775f1",
+    "assets/icon-128.png": "c18dd097436073cc09cab7522fbabefeefd7c5f9268679536fd3ed8c714b6b13"
+  },
+  "development_sha256": {
+    "chrome-extension/package.json": "abd74e0798b1f4ee2c64fa82c92310e0cc5417140df1db3b0b658089bacfaaaa",
+    "chrome-extension/package-lock.json": "c8db2744dfc3915dc3d5182ecd1b6a5c05d871b11fff3f1d977f818e63093d12",
+    "chrome-extension/tests/appearance.test.js": "7e28827cdd0656a5d49831c2098199a0cdd9238e4e1c0756ae932c2b4e101464",
+    "chrome-extension/tests/background.test.js": "90cf4f687429c1bd62ad0e33217b81b83298b053125fe1121e6c23ce3aab94c0",
+    "chrome-extension/tests/capture-store.test.js": "a025aacaad0a1fc272f0fefeaa29f9e89cdea91462830f57ea17d63476696e95",
+    "chrome-extension/tests/layout.test.js": "f1cf19ec39f0c3f99e1a77bb56b102f9acfb2d564ec911c8c2569d5e78084905",
+    "chrome-extension/tests/zoom.test.js": "f5803c462028eaa617cace1be0d28b962dfd2944671eae596f5aeb81378da5f8",
+    "chrome-extension/tests/capture-store.html": "ad44206ef4d34d4e837f4549567cffce39130c40c9ce7b86be6cc88d6ad86700",
+    "chrome-extension/tests/capture-store-browser.js": "b7ecda24a4df8406a4557dbe82513d13c6841f434ec96a8089d3301abf9aed71"
+  },
+  "limits": [
+    "No new loaded-extension MV3 integration run.",
+    "No physical 5K maximised-window capture; the large PNG is synthetic.",
+    "Native HTTP IndexedDB checks validate browser semantics, not extension-origin permission wiring.",
+    "Picker artwork is a frontend preview; replace with loaded-extension evidence during B6 if available.",
+    "B3 public pages, B4 publisher/contact/trader status, B5 live declarations and B6 clean-profile acceptance remain pending."
+  ]
+}

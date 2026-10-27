@@ -1,0 +1,60 @@
+name: Chrome checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    name: Unit tests and candidate package
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: chrome-extension/package-lock.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci --prefix chrome-extension
+      - run: python -m pip install -r requirements-dev.txt
+      - name: Run quality gate
+        run: make check
+      - uses: actions/upload-artifact@v4
+        with:
+          name: premiumshot-chrome-0.2.0-candidate
+          path: out/PremiumShot-Chrome-beta-0.2.0.zip
+          if-no-files-found: error
+
+  mac-parity:
+    name: Pinned Mac layout parity
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v5
+        with:
+          repository: f-campana/premiumshot-mac
+          ref: e32806f31a1ecc5c862f70cf3a6921742f8d976b
+          path: .references/premiumshot-mac
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: chrome-extension/package-lock.json
+      - run: npm ci --prefix chrome-extension
+      - name: Build the pinned CLI and compare layouts
+        run: make parity
+        env:
+          PSHOT_MAC_DIR: ${{ github.workspace }}/.references/premiumshot-mac

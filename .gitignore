@@ -1,0 +1,12 @@
+.DS_Store
+*.log
+.idea/
+.vscode/
+node_modules/
+__pycache__/
+.venv/
+.references/
+out/
+reports/
+chrome-web-store/checks.json
+chrome-web-store/SHA256SUMS

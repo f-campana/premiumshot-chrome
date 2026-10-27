@@ -1,0 +1,17 @@
+PremiumShot for Chrome 0.2.0 — review instructions
+
+Single purpose: capture/import a screenshot, style it locally, and copy/download a PNG. No login, license key, account, payment, backend, external service or Mac application is required. All runtime code and example assets are in the package.
+
+1. Pin the extension and open a regular HTTP(S) webpage. Click its icon.
+2. Choose Select an element, hover over an element fully inside the viewport, then click or press Enter. Up selects a parent; Down returns to its child; Esc cancels. The picker disappears before Chrome captures the tab and the editor crops it locally.
+3. Choose Capture visible tab for the current page viewport, or Select an area and draw a rectangle. Chrome toolbar/tab-strip and scrolling full-page capture are outside this beta's scope.
+4. In the new editor tab, choose Dawn, Tide, Paper, Graphite or Clear. Adjust Shape, Space, Corners and Shadow. Inspect, zoom/pan, Actual size, and Esc can be exercised before exporting.
+5. Choose Copy image and paste into an image-capable application, or Download PNG. Choose Back to page to return to the source tab.
+6. The editor can also be opened from the package's editor.html. Its Try an example button loads the packaged synthetic Meridian dashboard. Remove screenshot reveals the file-import controls; paste/drop/open PNG, JPEG or WebP images are supported.
+7. The header appearance icon offers System, Light and Dark. The preference and last style are saved in local extension storage. Screenshot transfers use PNG blobs in local IndexedDB and are consumed/deleted atomically on import. Session memory contains only selection tokens and a session identifier. Expired and previous-session records are cleaned on worker startup/next capture; source-tab close and failed editor creation also remove pending records. IndexedDB can remain on disk until cleanup if Chrome stops. No screenshots are sent to a server or placed in chrome.storage.local/sync.
+
+Element/area selection is restricted on Chrome internal pages and the Chrome Web Store. Test on an ordinary webpage. Selected elements must be fully visible; page movement, tab changes and pinch zoom can invalidate a selection. Visible-tab capture does not scroll the page. Closed shadow roots/cross-origin iframe interiors cannot be traversed; select the outer visible container or an area instead.
+
+The listing screenshots show the packaged popup at true size, the unchanged packaged picker over the real DOM of a synthetic Meridian page, and the current editor/Inspect frontend. The picker preview uses an artwork-only Chrome messaging adapter and a scripted hover; it does not exercise captureVisibleTab, permissions or clipboard writes. The adapter is excluded from the upload. These images demonstrate real UI and composition, not a new loaded-extension integration run. No customer content or credentials are included.
+
+This first beta uses one Unlisted store item. No global capture shortcut is assigned. Version 0.2.0 replaces the previous base64 session-storage handoff so large displays are not rejected by its 8 MB cap. The same rendering and five looks are preserved. The shared PremiumShot website is the home for both Mac and Chrome.

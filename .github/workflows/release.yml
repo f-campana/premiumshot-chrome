@@ -1,0 +1,50 @@
+name: Prepare draft Chrome release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  draft:
+    name: Check and prepare draft
+    runs-on: macos-26
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/checkout@v5
+        with:
+          repository: f-campana/premiumshot-mac
+          ref: e32806f31a1ecc5c862f70cf3a6921742f8d976b
+          path: .references/premiumshot-mac
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: chrome-extension/package-lock.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci --prefix chrome-extension
+      - run: python -m pip install -r requirements-dev.txt
+      - name: Check tag matches manifest
+        shell: bash
+        run: |
+          version="$(node -p "require('./chrome-extension/manifest.json').version")"
+          test "$GITHUB_REF_NAME" = "v$version"
+      - name: Check, package and compare the pinned Mac reference
+        run: make check parity
+        env:
+          PSHOT_MAC_DIR: ${{ github.workspace }}/.references/premiumshot-mac
+      - name: Create a draft release with the upload ZIP
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            "out/PremiumShot-Chrome-beta-${GITHUB_REF_NAME#v}.zip" \
+            --draft --title "$GITHUB_REF_NAME" \
+            --notes "Review the candidate and release evidence before publishing. Chrome Web Store upload remains manual."

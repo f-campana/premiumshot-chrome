@@ -1,0 +1,37 @@
+{
+  "name": "PremiumShot for Chrome",
+  "version": "0.2.0",
+  "whats_new": "Large captures now move to the editor as local PNG blobs, removing the previous 8 MB transfer limit. Capture, styling and export remain on your device.",
+  "short_description": "Capture a visible tab or select a webpage component, choose a look, and copy a polished image. Processed locally.",
+  "description_file": "listing-description.txt",
+  "language": "English",
+  "suggested_category": "Tools / Productivity (confirm the available dashboard label)",
+  "visibility": "Unlisted",
+  "item_strategy": "One item; retain its identity when the beta becomes public.",
+  "in_app_purchases": false,
+  "remote_code": false,
+  "single_purpose": "Capture or import a screenshot, compose it locally with a PremiumShot background and adjustable spacing, corners and shadow, then copy or download the finished PNG.",
+  "planned_urls": {
+    "homepage": "https://premiumshot.app/chrome/",
+    "privacy_policy": "https://premiumshot.app/privacy/chrome/",
+    "support": "https://premiumshot.app/support/chrome/"
+  },
+  "urls_status": "Planned only: domain not purchased or deployed as of 2026-10-10.",
+  "publisher": {
+    "suggested_display_name": "PremiumShot",
+    "confirmed_name": null,
+    "support_email": null,
+    "account_status": "Not registered as of 2026-10-10."
+  },
+  "screenshots": [
+    { "file": "assets/01-capture-popup.jpg", "caption": "Choose an element, the visible tab, or an area from the capture popup." },
+    { "file": "assets/02-element-picker.jpg", "caption": "The shipped element picker on a synthetic Meridian webpage." },
+    { "file": "assets/03-editor-dawn.jpg", "caption": "Choose a look, adjust the finish, and copy or download a PNG." },
+    { "file": "assets/04-editor-tide-dark.jpg", "caption": "Compose a 16:9 image in dark appearance." },
+    { "file": "assets/05-inspect.jpg", "caption": "Inspect the finished image before sharing it." }
+  ],
+  "store_icon": "assets/icon-128.png",
+  "small_promo": "assets/promo-small.jpg",
+  "marquee_promo": "assets/promo-marquee.jpg",
+  "video": null
+}

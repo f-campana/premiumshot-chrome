@@ -1,0 +1,16 @@
+Turn a webpage screenshot into an image worth sharing. Capture the visible tab, select a webpage element, or draw an area, then add a PremiumShot finish and copy or download a PNG.
+
+Make it yours:
+- Five looks: warm Dawn, deep Tide, soft Paper, dark Graphite, and transparent Clear.
+- Adjustable space, rounded corners, and shadow.
+- Fit, 16:9, 4:5, square, and 1.91:1 output shapes.
+- An Inspect view with zoom, pan, and Actual size.
+- Copy the finished image or download a PNG.
+- Paste an image, drop a file, or open a PNG, JPEG, or WebP.
+- System, Light, and Dark interface appearance.
+
+Your screenshots are processed on your device. PremiumShot does not upload them, run analytics, or require an account. Page access is temporary and starts when you invoke the extension. Your last style and appearance are remembered locally.
+
+This is the first Chrome beta. Capture covers visible webpage content. Chrome's toolbar and offscreen page content are outside the captured area; selected elements must fit within the visible page. Element and area selection work on regular webpages, with restrictions on Chrome's internal pages and the Web Store.
+
+PremiumShot for Chrome works independently of the Mac app. Requires Chrome 120 or later.
