@@ -20,7 +20,7 @@ The manifest controls the name, version and 113-character summary. The detailed 
 | Upload | File | Dimensions | Purpose |
 | --- | --- | --- | --- |
 | Store icon | `assets/icon-128.png` | 128 × 128 | Existing brand artwork at 96 × 96 with 16 px transparent padding. |
-| Screenshot 1 | `assets/01-capture-popup.jpg` | 1280 × 800 | Packaged capture popup at its true 350 × 452 size on a neutral canvas. |
+| Screenshot 1 | `assets/01-capture-popup.jpg` | 1280 × 800 | Packaged capture popup at its true 350 × 452 size over the synthetic Meridian webpage, full bleed with no padding. |
 | Screenshot 2 | `assets/02-element-picker.jpg` | 1280 × 800 | Packaged picker frontend selecting a card on the synthetic Meridian webpage. |
 | Screenshot 3 | `assets/03-editor-dawn.jpg` | 1280 × 800 | Light editor, five looks, finish controls and PNG exports. |
 | Screenshot 4 | `assets/04-editor-tide-dark.jpg` | 1280 × 800 | Dark editor with Tide and 16:9 composition. |
@@ -30,7 +30,7 @@ The manifest controls the name, version and 113-character summary. The detailed 
 
 ![Small promotional tile](assets/promo-small.jpg)
 
-The screenshots capture the shipped frontends served locally. [Popup artwork](source/capture-popup.html) embeds the exact popup HTML without scaling. [Picker artwork](source/capture-picker.html) loads the unchanged `picker.js` over the real DOM of our synthetic fixture; [its adapter](source/capture-picker.js) supplies Chrome messaging and a scripted hover only. It does not call captureVisibleTab or grant permissions. No picker controls are redrawn or invented. The preview adapter and fixture are excluded from the extension upload. This is source-faithful UI artwork, **not loaded-extension capture evidence**; replace the picker image with a real extension screenshot during B6 if available.
+The screenshots capture the shipped frontends served locally. [Popup artwork](source/capture-popup.html) embeds the exact popup HTML without scaling, positioned over the synthetic fixture page at the top right. It is a source-faithful preview, not a loaded-extension capture, and shows no browser toolbar. [Picker artwork](source/capture-picker.html) loads the unchanged `picker.js` over the real DOM of our synthetic fixture; [its adapter](source/capture-picker.js) supplies Chrome messaging and a scripted hover only. It does not call captureVisibleTab or grant permissions. No picker controls are redrawn or invented. The preview adapter and fixture are excluded from the extension upload. This is source-faithful UI artwork, **not loaded-extension capture evidence**; replace the picker image with a real extension screenshot during B6 if available.
 
 The Dawn and Tide editor images retain the prior clean 0.1.4 captures: editor markup, styles, composition and the packaged dashboard are unchanged. Fresh 0.2.0 frontend captures and five downloads were checked separately; Inspect was refreshed from 0.2.0. No customer content, invented browser chrome or credentials are included. Chrome's native screenshot output is JPEG; the files retain that format. Promotional artwork is rendered from [its HTML source](source/promo.html) and a real exported PNG. It is promotional composition, separate from the actual UI screenshots. Source provenance and file hashes are in `validation.json` and `checks.json`.
 

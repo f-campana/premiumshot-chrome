@@ -25,7 +25,7 @@
 - [x] Saved System/Light/Dark across popup and reopened editors; real OS appearance change while System is selected.
 - [ ] Reload/close discards the current source; last style remains; no unexpected error in the extension's service worker/editor console.
 - [x] Real capture at the largest available maximised window, including a 5K viewport at 2× where available. Inspect the extension's IndexedDB after import, picker cancellation, expired transfer cleanup and source-tab close: no corresponding pending records. Synthetic 10,240 × 5,760 PNG coverage already passes; it is not a physical-display capture test.
-- [ ] Browser restart/extension reload invalidates pending captures and removes old-session database records on the next worker startup.
+- [ ] Browser restart/extension reload invalidates pending captures, and the extension tries to remove old-session database records on the next worker startup.
 
 **20 October native acceptance:** the exact 0.2.0 upload ZIP was loaded in a fresh signed-out profile and exercised through user-authorized native CUA. The four checked rows above have [itemized evidence](../docs/acceptance-0.2.0.md). Reload and actual close/reopen discard the source and retain style; final console observations are still pending. Real ten-minute expiry, picker cancellation, source-tab closure and extension reload pass, with empty stores and a changed session id. The available built-in display produced a real 3024 × 1724 maximized viewport; no physical 5K display was available. Fabien authorized global Chrome restart, but native control then returned a ScreenCaptureKit failure/frozen frame and an off-screen menu-bar error. Restart and final console checks remain open until native control recovers.
 

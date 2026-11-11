@@ -186,7 +186,7 @@
   "artwork": [
     {
       "file": "assets/01-capture-popup.jpg",
-      "source": "Current packaged popup HTML at true 350 x 452 CSS pixels in source/capture-popup.html; local HTTP, not loaded MV3."
+      "source": "Current packaged popup HTML at true 350 x 452 CSS pixels over the synthetic source/fixture.html page, full bleed, in source/capture-popup.html; rendered with headless Chrome over local HTTP, light appearance, not loaded MV3."
     },
     {
       "file": "assets/02-element-picker.jpg",
